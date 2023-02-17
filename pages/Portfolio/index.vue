@@ -1,5 +1,7 @@
 <template>
-    <H1>Наши работы</H1>
+    <div class="">
+        <p>Наши работы</p>
+    </div>
     <div class="csrd">
         <div class="item_card" v-for="item in products" :key="item.id">
             <img width="200" :src="item.image" alt="">
@@ -15,13 +17,16 @@
     
 <script setup>
 
-   const {data: products} = await useFetch('https://fakestoreapi.com/products?limit=5')
+const { data: products } = await useFetch('https://fakestoreapi.com/products?limit=5')
 </script>
 
 <style>
 .csrd {
     display: flex;
     flex-wrap: wrap;
+    max-width: 1536px;
+    margin: 0 auto;
+    padding: 40px;
 }
 
 .item_card {

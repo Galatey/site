@@ -1,28 +1,41 @@
 <template>
-    <header class="header">
-        <nuxt-link class="logo" to="/"><img src="@/assets/img/logo.jpg" alt=""
-                style="width:100%; height:100%"></nuxt-link>
-        <nav class="nav">
-            <ul class="nav_item">
-                <nuxt-link class="nav_item_link">О компании</nuxt-link>
-                <nuxt-link class="nav_item_link" to="/Portfolio">Работы</nuxt-link>
-                <nuxt-link class="nav_item_link">Контакты</nuxt-link>
-            </ul>
-        </nav>
-    </header>
-    <slot />
-    <footer class="footer">
-        <div>
-            <nuxt-link class="logo_footer" to="/">LOGO</nuxt-link>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-        <div>
-            <p>Контакты</p>
-        </div>
-        <div>
-            <p>Реквизиты</p>
-        </div>
-    </footer>
+    <div class="common-layout">
+        <el-container>
+            <el-header>
+                <header class="header">
+                    <nuxt-link class="logo" to="/"><img src="@/assets/img/logo.jpg" alt=""
+                            style="width:100%; height:100%"></nuxt-link>
+                    <nav class="nav">
+                        <ul class="nav_item">
+                            <nuxt-link class="nav_item_link">О компании</nuxt-link>
+                            <nuxt-link class="nav_item_link" to="/Portfolio">Работы</nuxt-link>
+                            <nuxt-link class="nav_item_link">Контакты</nuxt-link>
+                        </ul>
+                    </nav>
+                </header>
+            </el-header>
+            <el-main>
+                <slot />
+            </el-main>
+            <el-footer>
+                <footer class="footer">
+                    <div>
+                        <nuxt-link class="logo_footer" to="/">LOGO</nuxt-link>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div>
+                        <p>Контакты</p>
+                    </div>
+                    <div>
+                        <p>Реквизиты</p>
+                    </div>
+                </footer>
+            </el-footer>
+        </el-container>
+    </div>
+
+
+
 </template>
 
 <style>
@@ -32,7 +45,6 @@
     max-width: 1536px;
     margin: 0 auto;
     padding: 10px;
-    background-color: rgb(238, 235, 235);
 }
 
 .logo {
@@ -43,6 +55,7 @@
     justify-content: center;
     font-size: 24px;
     text-decoration: none;
+    margin-left: 30px;
 }
 
 .nav {
@@ -76,7 +89,6 @@
     max-width: 1536px;
     margin: 0 auto;
     padding: 40px;
-    background-color: rgb(238, 235, 235);
 }
 
 .logo_footer {

@@ -30,12 +30,28 @@
     font-size: 24px;
 }
 
+.nav {
+    margin-right: 30px;
+}
+
 .nav_item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 250px;
+    width: 375px;
     height: 60px;
 }
 
+.nav_item_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    height: 35px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: rgb(80, 247, 211);
+}
 </style>

@@ -1,4 +1,5 @@
 <template>
+  <el-divider class="divider" />
   <div class="baner">
     <div class="baner_info">
       <p>Строим дома и котеджи по вашим проектам</p>
@@ -10,21 +11,38 @@
       <p>Сопровождение от выбора участка до регистрации</p>
     </div>
   </div>
+  <el-divider class="divider" />
   <div class="carusel">
-    <el-carousel :interval="4000" type="card" height="400px">
+    <el-carousel :interval="4000" type="card">
       <el-carousel-item v-for="item in products" :key="item.id">
-        <nuxt-link to="/Portfolio" :product="item"><img width="500" :src="item.image" alt=""
-            style="width:100%; height:100% "></nuxt-link>
+        <nuxt-link to="/Portfolio" :product="item">
+          <el-image style="width: 100%; height: 100%" :src="item.image" />
+          <!-- <img :src="item.image" alt="" 
+            style="height: 100%; width: 100%;">  -->
+        </nuxt-link>
       </el-carousel-item>
     </el-carousel>
   </div>
+  <el-divider class="divider" />
 </template>
 
 <script setup>
-const { data: products } = await useFetch('https://fakestoreapi.com/products?limit=5')
+import { ref } from 'vue'
+const products = ref([
+  { id: 1, image: "https://avatars.mds.yandex.net/i?id=0440b1bed4fc89f11a85a15ce6f66e6792d63e12-7546644-images-thumbs&n=13" },
+  { id: 2, image: "https://avatars.mds.yandex.net/i?id=f1be1d0bdf24700090478f21ca719288daced805-8497203-images-thumbs&n=13" },
+  { id: 1, image: "https://avatars.mds.yandex.net/i?id=f1f6d9a5dbc28778b8423f9ad69b9f23dddb0304-7464698-images-thumbs&n=13" },
+])
+//const { data: products } = await useFetch('https://fakestoreapi.com/products?limit=5')
 </script>
   
 <style scoped>
+.divider {
+  display: flex;
+  max-width: 1536px;
+  margin: 0 auto;
+}
+
 .baner {
   max-width: 1536px;
   margin: 0 auto;
@@ -53,7 +71,7 @@ const { data: products } = await useFetch('https://fakestoreapi.com/products?lim
 .carusel {
   max-width: 1536px;
   margin: 0 auto;
-
+  padding: 10px;
 }
 
 .el-carousel__item h3 {
@@ -65,10 +83,10 @@ const { data: products } = await useFetch('https://fakestoreapi.com/products?lim
 }
 
 .el-carousel__item:nth-child(2n) {
-  background-color: #99a9bf;
+  background-color: transparent;
 }
 
 .el-carousel__item:nth-child(2n + 1) {
-  background-color: #d3dce6;
+  background-color: transparent;
 }
 </style>
