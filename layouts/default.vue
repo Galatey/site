@@ -135,7 +135,7 @@
     justify-content: space-between;
 }
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 400px) {
     .logo {
         display: none;
     }
