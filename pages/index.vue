@@ -2,7 +2,7 @@
   <el-divider class="divider" />
   <div class="baner">
     <div class="baner_info">
-      <p>Строим дома и котеджи по вашим проектам</p>
+      <p>Строим дома и коттеджи по вашим проектам</p>
     </div>
     <div class="baner_price">
       <p>Конкурентные цены</p>
