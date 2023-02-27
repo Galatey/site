@@ -6,7 +6,7 @@
                     style="width: 20px; height: 20px;">
             </button>
             <div class="image">
-                <img :src="pic.image" alt="" style="width: 950px;">
+                <img :src="pic.image" alt="">
                 <span>{{ pic.title }}</span>
             </div>
             <div class="bytton_window">
@@ -30,8 +30,6 @@ const props = defineProps({
     }
 })
 
-const { id } = useRoute().params
-
 const emit = defineEmits(['close'])
 
 </script>
@@ -48,14 +46,13 @@ const emit = defineEmits(['close'])
     right: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.9;
     background-color: black;
     z-index: 3;
 }
 
 .modal_title {
     display: flex;
-    min-width: 550px;
+    min-width: 400px;
     min-height: 350px;
     background-color: white;
     border-radius: 20px;
@@ -80,5 +77,27 @@ const emit = defineEmits(['close'])
 .link_window {
     text-decoration: none;
     color: rgb(48, 67, 235);
+}
+
+@media screen and (max-width: 400px) {
+    .image {
+        display: flex;
+        flex-direction: column;
+        width: 365px;
+        height: 600px;
+        object-fit: contain;
+    }
+
+    .modal_title {
+        display: flex;
+        min-width: 400px;
+        min-height: 600px;
+        background-color: white;
+        border-radius: 20px;
+        padding: 15px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
 }
 </style>
