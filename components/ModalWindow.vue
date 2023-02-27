@@ -5,7 +5,10 @@
                 <img @click="$emit('close')" src="@/assets/img/svg/close_ttb26jywocdu.svg" alt=""
                     style="width: 20px; height: 20px;">
             </button>
-            <img :src="pic" alt="" style="width: 950px;">
+            <div class="image">
+                <img :src="pic.image" alt="" style="width: 950px;">
+                <span>{{ pic.title }}</span>
+            </div>
             <div class="bytton_window">
                 <NuxtLink class="link_window" to="/">Больше фото</NuxtLink>
                 <NuxtLink class="link_window" to="/Portfolio">Другие работы</NuxtLink>
@@ -21,7 +24,9 @@ const props = defineProps({
         type: Boolean,
     },
     pic: {
-        type: String,
+        id: { type: String },
+        image: { type: String },
+        title: { type: String },
     }
 })
 
@@ -58,6 +63,12 @@ const emit = defineEmits(['close'])
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
+}
+
+.image {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
 }
 
 .bytton_window {
