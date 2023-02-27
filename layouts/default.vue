@@ -1,7 +1,5 @@
 <template>
     <div class="common-layout">
-        <el-container>
-            <el-header>
                 <header class="header">
                     <nuxt-link class="logo" to="/">
                         <img src="@/assets/img/logo.jpg" alt="" style="width:100%; height:100%">
@@ -12,11 +10,7 @@
                         <nuxt-link class="nav_item_link">Контакты</nuxt-link>
                     </nav>
                 </header>
-            </el-header>
-            <el-main>
                 <slot />
-            </el-main>
-            <el-footer>
                 <footer class="footer">
                     <div>
                         <nuxt-link class="logo_footer" to="/">
@@ -44,8 +38,6 @@
                         </nuxt-link>
                     </div>
                 </footer>
-            </el-footer>
-        </el-container>
     </div>
 
 
@@ -112,10 +104,11 @@
 }
 .contacts {
     display: flex;
-    width: 150px;
+    min-width: 150px;
     height: 150px;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-end;
 }
 
 .contacts_item_link {
@@ -126,13 +119,6 @@
     width: 20px;
     height: 20px;
     margin-right: 5px;
-}
-
-.Requisites {
-    display: flex;
-    width: 350px;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 @media screen and (max-width: 400px) {
