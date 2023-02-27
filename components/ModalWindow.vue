@@ -5,7 +5,7 @@
                 <img @click="$emit('close')" src="@/assets/img/svg/close_ttb26jywocdu.svg" alt=""
                     style="width: 20px; height: 20px;">
             </button>
-            <img :src="pic" alt="" style="width: 750px;">
+            <img :src="pic" alt="" style="width: 950px;">
             <div class="bytton_window">
                 <NuxtLink class="link_window" to="/">Больше фото</NuxtLink>
                 <NuxtLink class="link_window" to="/Portfolio">Другие работы</NuxtLink>
