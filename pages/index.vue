@@ -15,26 +15,27 @@
   <div class="carusel">
     <el-carousel :interval="4000" type="card" >
       <el-carousel-item v-for="item in products" :key="item.id">
-          <img :src="item.image" alt="" 
-            style=""> 
+          <img @click="modalwindow = true" :src="item.image" alt=""> 
       </el-carousel-item>
     </el-carousel>
   </div>
   <el-divider class="divider" />
+    <div class="content">
+      <span></span>
+    </div>
+  <el-divider class="divider" />
+  <modal-window />
 </template>
 
 <script setup>
-// const product = defineProps ({
-//   products: {
-//     image
-//   }
-// })
 import { ref } from 'vue'
+
 const products = ref([
   { id: 1, image: "https://avatars.mds.yandex.net/i?id=0440b1bed4fc89f11a85a15ce6f66e6792d63e12-7546644-images-thumbs&n=13" },
   { id: 2, image: "https://avatars.mds.yandex.net/i?id=f1be1d0bdf24700090478f21ca719288daced805-8497203-images-thumbs&n=13" },
   { id: 1, image: "https://avatars.mds.yandex.net/i?id=f1f6d9a5dbc28778b8423f9ad69b9f23dddb0304-7464698-images-thumbs&n=13" },
 ])
+const modalwindow = (false)
 // const { data: products } = await useFetch('https://fakestoreapi.com/products?limit=5')
 </script>
   
