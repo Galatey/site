@@ -50,8 +50,8 @@ const products = ref([
 </style> -->
 <template>
     <el-row>
-        <el-col v-for="(o, index) in 2" :key="o" :span="8" :offset="index > 0 ? 2 : 0">
-            <el-card :body-style="{ padding: '0px' }">
+        <el-col v-for="(o, index) in 10" :key="o" :span="5">
+            <el-card :body-style="{ padding: '10px' }">
                 <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"
                     class="image" />
                 <div style="padding: 14px">
@@ -73,6 +73,13 @@ const currentDate = ref(new Date())
 </script>
   
 <style>
+.el-row {
+    max-width: 1536px;
+    margin: auto;
+    padding: 10px 30px;
+    gap: 5px
+}
+
 .time {
     font-size: 12px;
     color: #999;
