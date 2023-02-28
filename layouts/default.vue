@@ -9,19 +9,6 @@
                 <nuxt-link class="nav_item_link" to="/Portfolio">Работы</nuxt-link>
                 <nuxt-link class="nav_item_link">Контакты</nuxt-link>
             </nav>
-            <nav class="nav_mobail">
-                <el-button style="margin-left: 16px" @click="drawer = true">
-                    <img src="@/assets/img/svg/menu_vpnpy0k6arb0.svg" alt="" style="width: 20px;">
-                </el-button>
-
-                <el-drawer v-model="drawer" :with-header="true" size="50%">
-                    <div class="mobail_link">
-                        <nuxt-link class="nav_item_link">О компании</nuxt-link>
-                        <nuxt-link class="nav_item_link" to="/Portfolio">Работы</nuxt-link>
-                        <nuxt-link class="nav_item_link">Контакты</nuxt-link>
-                    </div>
-                </el-drawer>
-            </nav>
         </header>
         <slot />
         <footer class="footer">
@@ -54,9 +41,8 @@
     </div>
 </template>
 
-<script lang="ts" setup>
-import { ref } from 'vue'
-const drawer = ref(false)
+<script setup>
+
 </script>
 
 <style>
@@ -87,9 +73,6 @@ const drawer = ref(false)
     height: 60px;
 }
 
-.nav_mobail {
-    display: none;
-}
 
 .nav_item_link {
     display: flex;
@@ -145,27 +128,18 @@ const drawer = ref(false)
 
 @media screen and (max-width: 400px) {
     .logo {
-        display: flex;
-        width: 100px;
-        height: 40px;
-        align-items: center;
-        justify-content: center;
-        font-size: 24px;
-        text-decoration: none;
-    }
-
-    .nav {
         display: none;
     }
 
-    .nav_mobail {
-        display: initial;
+    .header {
+        display: flex;
+        justify-content: center;
     }
 
-    .mobail_link {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+    .nav_item_link {
+        min-width: 100px;
+        font-size: 16px;
     }
+
 }
 </style>
