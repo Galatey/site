@@ -10,8 +10,8 @@
                 <nuxt-link class="nav_item_link">Контакты</nuxt-link>
             </nav>
             <nav class="nav_mobail">
-                <el-button type="primary" style="margin-left: 16px" @click="drawer = true">
-                    open
+                <el-button style="margin-left: 16px" @click="drawer = true">
+                    <img src="@/assets/img/svg/menu_vpnpy0k6arb0.svg" alt="" style="width: 20px;">
                 </el-button>
 
                 <el-drawer v-model="drawer" :with-header="true" size="50%">
