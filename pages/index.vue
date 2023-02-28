@@ -24,7 +24,9 @@
     <span></span>
   </div>
   <el-divider class="divider" />
-  <ModalWindow @close="show = false" :show="show" :pic="pic" />
+  <transition name="fade">
+    <ModalWindow @close="show = false" :show="show" :pic="pic" />
+  </transition>
 </template>
 
 <script setup>
@@ -91,5 +93,15 @@ const products = ref([
 
 .el-carousel__item:nth-child(2n + 1) {
   background-color: transparent;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
