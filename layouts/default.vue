@@ -9,6 +9,19 @@
                 <nuxt-link class="nav_item_link" to="/Portfolio">Работы</nuxt-link>
                 <nuxt-link class="nav_item_link">Контакты</nuxt-link>
             </nav>
+            <nav class="nav_mobail">
+                <el-button style="margin-left: 16px" @click="drawer = true">
+                    <img src="@/assets/img/svg/menu_vpnpy0k6arb0.svg" alt="" style="width: 20px;">
+                </el-button>
+
+                <el-drawer v-model="drawer" title="I am the title" :with-header="false" size="60%">
+                    <div class="mobail_link">
+                        <nuxt-link class="nav_item_link">О компании</nuxt-link>
+                        <nuxt-link class="nav_item_link" to="/Portfolio">Работы</nuxt-link>
+                        <nuxt-link class="nav_item_link">Контакты</nuxt-link>
+                    </div>
+                </el-drawer>
+            </nav>
         </header>
         <slot />
         <footer class="footer">
@@ -41,6 +54,11 @@
     </div>
 </template>
 
+<script setup>
+import { ref } from 'vue'
+const drawer = ref(false)
+</script>
+
 <style>
 .header {
     display: flex;
@@ -48,6 +66,7 @@
     max-width: 1536px;
     padding: 10px 30px;
     margin: 0 auto;
+    align-items: center;
 }
 
 .logo {
@@ -66,6 +85,10 @@
     align-items: center;
     width: 500px;
     height: 60px;
+}
+
+.nav_mobail {
+    display: none;
 }
 
 .nav_item_link {
@@ -122,21 +145,27 @@
 
 @media screen and (max-width: 400px) {
     .logo {
+        display: flex;
+        width: 100px;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        text-decoration: none;
+    }
+
+    .nav {
         display: none;
     }
 
-    .nav_item_link {
+    .nav_mobail {
+        display: initial;
+    }
+
+    .mobail_link {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 90px;
-        height: 35px;
-        padding: 10px;
-        border-radius: 5px;
-        font-size: 12px;
-        text-decoration: none;
-        color: black;
-        background-color: rgb(255, 217, 160);
+        flex-direction: column;
+        gap: 10px;
     }
 }
 </style>
