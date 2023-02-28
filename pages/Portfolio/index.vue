@@ -84,6 +84,8 @@ const products = ref([
   
 <style>
 .el-row {
+    display: flex;
+    justify-content: center;
     max-width: 1536px;
     margin: auto;
     padding: 10px 30px;
@@ -121,5 +123,11 @@ const products = ref([
 .fade-enter-from,
 .fade-leave-to {
     opacity: 0;
+}
+
+@media screen and (max-width: 400px) {
+    .el-col-5 {
+        min-width: 100%;
+    }
 }
 </style>
