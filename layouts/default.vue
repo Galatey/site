@@ -10,11 +10,11 @@
                 <nuxt-link class="nav_item_link">Контакты</nuxt-link>
             </nav>
             <nav class="nav_mobail">
-                <el-button style="margin-left: 16px" @click="drawer = true">
-                    <img src="@/assets/img/svg/menu_vpnpy0k6arb0.svg" alt="" style="width: 20px;">
+                <el-button type="primary" style="margin-left: 16px" @click="drawer = true">
+                    open
                 </el-button>
 
-                <el-drawer v-model="drawer" title="I am the title" :with-header="false" size="60%">
+                <el-drawer v-model="drawer" :with-header="true" size="50%">
                     <div class="mobail_link">
                         <nuxt-link class="nav_item_link">О компании</nuxt-link>
                         <nuxt-link class="nav_item_link" to="/Portfolio">Работы</nuxt-link>
@@ -54,7 +54,7 @@
     </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { ref } from 'vue'
 const drawer = ref(false)
 </script>
