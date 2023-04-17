@@ -9,6 +9,9 @@
                         <nuxt-link class="nav_item_link" to="/Portfolio">Работы</nuxt-link>
                         <nuxt-link class="nav_item_link">Контакты</nuxt-link>
                     </nav>
+                    <div class="top-phone">
+                        <span class="phone">+7 (900) 000-00-00</span>
+                    </div>
                 </header>
                 <slot />
                 <footer class="footer">
@@ -51,6 +54,7 @@
     max-width: 1536px;
     padding: 10px 30px;
     margin: 0 auto;
+    gap: 15px;
 }
 
 .logo {
@@ -69,6 +73,7 @@
     align-items: center;
     width: 500px;
     height: 60px;
+    gap: 15px;
 }
 
 .nav_item_link {
@@ -83,6 +88,19 @@
     text-decoration: none;
     color: black;
     background-color: rgb(255, 217, 160);
+}
+
+.top-phone {
+    display: flex;
+    min-width: 190px;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone {
+    display: flex;
+    flex-direction: row;
+    font-size: 24px;
 }
 
 .footer {

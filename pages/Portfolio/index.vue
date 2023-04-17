@@ -2,10 +2,10 @@
     <div class="">
         <p>Наши работы</p>
     </div>
-    <div class="csrd">
+    <div class="card">
         <div class="item_card" v-for="item in products" :key="item.id">
             <img width="200" :src="item.image" alt="">
-            <NuxtLink :to="'/Portfolio/&{item.image}'">
+            <NuxtLink :to="`/Portfolio/&{item.image}`">
                 {{ item.image }}
             </NuxtLink>
         </div>
@@ -23,7 +23,7 @@ const products = ref([
 </script>
 
 <style>
-.csrd {
+.card {
     display: flex;
     flex-wrap: wrap;
     max-width: 1536px;
