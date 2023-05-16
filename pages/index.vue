@@ -16,7 +16,6 @@
     </div>
   </div>
   <el-divider class="divider" />
-<<<<<<< HEAD
   <div class="stroy">
     <div class="stroy_info">
       <p>Строительство домов и коттеджей</p>
@@ -42,7 +41,6 @@
       <p>Внешняя и внутренняя отделка домов и квартир</p>
     </div>
   </div>
-=======
   <div class="carusel">
     <el-carousel :interval="8000" type="card">
       <el-carousel-item v-for="item in products" :key="item.id">
