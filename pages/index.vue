@@ -56,7 +56,6 @@
   <transition name="fade">
     <ModalWindow @close="show = false" :show="show" :pic="pic" />
   </transition>
->>>>>>> fa35d3a27d4d31d539ad9b4511f828fa25ba90b5
 </template>
 
 <script setup>
