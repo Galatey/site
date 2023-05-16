@@ -1,5 +1,6 @@
 <template>
     <div class="common-layout">
+<<<<<<< HEAD
                 <header class="header">
                     <nuxt-link class="logo" to="/">
                         <img src="@/assets/img/logo.jpg" alt="" style="width:100%; height:100%">
@@ -41,11 +42,52 @@
                         </nuxt-link>
                     </div>
                 </footer>
+=======
+        <header class="header">
+            <nuxt-link class="logo" to="/">
+                <img src="@/assets/img/logo.jpg" alt="" style="width:100%; height:100%">
+            </nuxt-link>
+            <nav class="nav">
+                <nuxt-link class="nav_item_link">О компании</nuxt-link>
+                <nuxt-link class="nav_item_link" to="/Portfolio">Работы</nuxt-link>
+                <nuxt-link class="nav_item_link">Контакты</nuxt-link>
+            </nav>
+        </header>
+        <slot />
+        <footer class="footer">
+            <div>
+                <nuxt-link class="logo_footer" to="/">
+                    <img src="@/assets/img/logo.jpg" alt="" style="width:100%; height:100%">
+                </nuxt-link>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="contacts">
+                <span>Контакты</span>
+                <nuxt-link class="contacts_item_link" to="https://vk.com" target="_blank">
+                    <img class="icons" src="@/assets/img/svg/vk_jwps1kngigw6.svg" alt="">
+                    <span>VK</span>
+                </nuxt-link>
+                <nuxt-link class="contacts_item_link" to="https://web.telegram.org" target="_blank">
+                    <img class="icons" src="@/assets/img/svg/telegram_79rt2itlji9i.svg" alt="">
+                    <span>Telegramm</span>
+                </nuxt-link>
+                <nuxt-link class="contacts_item_link" to="https://web.whatsapp.com" target="_blank">
+                    <img class="icons" src="@/assets/img/svg/whatsapp_ig80sdcz30vh.svg" alt="">
+                    <span>WhatsApp</span>
+                </nuxt-link>
+                <nuxt-link class="contacts_item_link" to="">
+                    <img class="icons" src="@/assets/img/svg/viber_xg4lbhqd40j8.svg" alt="">
+                    Viber
+                </nuxt-link>
+            </div>
+        </footer>
+>>>>>>> fa35d3a27d4d31d539ad9b4511f828fa25ba90b5
     </div>
-
-
-
 </template>
+
+<script setup>
+
+</script>
 
 <style>
 .header {
@@ -54,7 +96,11 @@
     max-width: 1536px;
     padding: 10px 30px;
     margin: 0 auto;
+<<<<<<< HEAD
     gap: 15px;
+=======
+    align-items: center;
+>>>>>>> fa35d3a27d4d31d539ad9b4511f828fa25ba90b5
 }
 
 .logo {
@@ -75,6 +121,7 @@
     height: 60px;
     gap: 15px;
 }
+
 
 .nav_item_link {
     display: flex;
@@ -120,6 +167,7 @@
     text-decoration: none;
     font-size: 24px;
 }
+
 .contacts {
     display: flex;
     min-width: 150px;
@@ -131,6 +179,7 @@
 
 .contacts_item_link {
     text-decoration: none;
+    color: rgb(48, 67, 235);
 }
 
 .icons {
@@ -144,18 +193,15 @@
         display: none;
     }
 
+    .header {
+        display: flex;
+        justify-content: center;
+    }
+
     .nav_item_link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 90px;
-    height: 35px;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 12px;
-    text-decoration: none;
-    color: black;
-    background-color: rgb(255, 217, 160);
-}
+        min-width: 100px;
+        font-size: 16px;
+    }
+
 }
 </style>

@@ -52,6 +52,7 @@
     border-radius: 5px;
     font-size: 20px;
     text-decoration: none;
-    background-color: rgb(80, 247, 211);
+    color: black;
+    background-color: rgb(255, 217, 160);
 }
 </style>
