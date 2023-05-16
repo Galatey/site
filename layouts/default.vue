@@ -1,6 +1,5 @@
 <template>
     <div class="common-layout">
-<<<<<<< HEAD
                 <header class="header">
                     <nuxt-link class="logo" to="/">
                         <img src="@/assets/img/logo.jpg" alt="" style="width:100%; height:100%">
@@ -42,7 +41,6 @@
                         </nuxt-link>
                     </div>
                 </footer>
-=======
         <header class="header">
             <nuxt-link class="logo" to="/">
                 <img src="@/assets/img/logo.jpg" alt="" style="width:100%; height:100%">
@@ -81,7 +79,6 @@
                 </nuxt-link>
             </div>
         </footer>
->>>>>>> fa35d3a27d4d31d539ad9b4511f828fa25ba90b5
     </div>
 </template>
 
@@ -96,11 +93,8 @@
     max-width: 1536px;
     padding: 10px 30px;
     margin: 0 auto;
-<<<<<<< HEAD
     gap: 15px;
-=======
     align-items: center;
->>>>>>> fa35d3a27d4d31d539ad9b4511f828fa25ba90b5
 }
 
 .logo {
