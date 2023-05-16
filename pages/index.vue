@@ -159,13 +159,13 @@ const products = ref([
   background-color: transparent;
 }
 
-<<<<<<< HEAD
 @media screen and (max-width: 400px) {
   .stroy_info {
     font-size: 16px;
   padding-top: 80px;
 }
-=======
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity .5s ease;
@@ -174,6 +174,6 @@ const products = ref([
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
->>>>>>> fa35d3a27d4d31d539ad9b4511f828fa25ba90b5
+
 }
 </style>
