@@ -232,17 +232,21 @@ const products = ref([
 }
 
 @media screen and (max-width: 450px) {
+
   .stroy_info {
     font-size: 16px;
     padding-top: 2%;
 }
-}
-
-@media screen and (max-width: 450px) {
   .otdelka_info {
     font-size: 16px;
     padding-top: 2%;
 }
+  .baner {
+    padding: 20px 40px;
+  }
+  .baner_info {
+    font-size: 22px;
+  }
 }
 
 @media screen and (max-width: 550px) {
