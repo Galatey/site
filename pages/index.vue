@@ -250,14 +250,12 @@ const products = ref([
 }
 
 @media screen and (max-width: 550px) {
+
   .stroy_info {
     font-size: 20px;
     padding-top: 2%;
     margin-right: 15px;
 }
-}
-
-@media screen and (max-width: 550px) {
   .otdelka_info {
     font-size: 20px;
     padding-top: 2%;
@@ -266,14 +264,12 @@ const products = ref([
 }
 
 @media screen and (max-width: 700px) {
+
   .stroy_info {
     font-size: 22px;
     padding-top: 2%;
     margin-right: 15px;
 }
-}
-
-@media screen and (max-width: 700px) {
   .otdelka_info {
     font-size: 22px;
     padding-top: 2%;

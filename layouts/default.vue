@@ -65,7 +65,6 @@
     height: 60px;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
     text-decoration: none;
 }
 
@@ -144,19 +143,24 @@
     margin-right: 5px;
 }
 
-@media screen and (max-width: 400px) {
-    .logo {
-        display: none;
-    }
+@media screen and (max-width: 450px) {
 
     .header {
         display: flex;
         justify-content: center;
     }
 
-    .nav_item_link {
-        min-width: 100px;
-        font-size: 16px;
+    .logo {
+        display: flex;
+        width: 120px;
+        height: 60px;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    .nav {
+        display: none;
     }
 
 }
