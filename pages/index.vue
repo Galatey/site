@@ -18,18 +18,10 @@
   <el-divider class="divider" />
   <div class="stroy">
     <div class="stroy_info">
-      <p>Строительство домов и коттеджей</p>
+      <p>Строительство домов, бань и коттеджей</p>
     </div>
     <div class="stroy_foto">
-      <div class="carusel_block">
-        <el-carousel indicator-position="outside" >
-          <el-carousel-item v-for="item in products" :key="item.id">
-            <img @click="modalwindow = true" :src="item.image" alt=""> 
-          </el-carousel-item>
-        </el-carousel>
-      </div>
-      <!-- <el-image style="width: 100%; height: 100%" src="https://avatars.mds.yandex.net/i?id=0440b1bed4fc89f11a85a15ce6f66e6792d63e12-7546644-images-thumbs&n=13" fit="cover" /> -->
-      <!-- <img src="https://avatars.mds.yandex.net/i?id=0440b1bed4fc89f11a85a15ce6f66e6792d63e12-7546644-images-thumbs&n=13" alt=""> -->
+      <el-image style="width: 100%; height: 100%" src="https://avatars.mds.yandex.net/i?id=0440b1bed4fc89f11a85a15ce6f66e6792d63e12-7546644-images-thumbs&n=13" fit="cover" />
     </div>
   </div>
   <el-divider class="divider" />
@@ -38,9 +30,19 @@
       <el-image style="width: 100%; height: 100%" src="https://avatars.mds.yandex.net/i?id=0440b1bed4fc89f11a85a15ce6f66e6792d63e12-7546644-images-thumbs&n=13" fit="cover" />
     </div>
     <div class="otdelka_info">
-      <p>Внешняя и внутренняя отделка домов и квартир</p>
+      <p>Внешняя и внутренняя отделка любого уровня сложности</p>
     </div>
   </div>
+  <el-divider class="divider" />
+  <div class="stroy">
+    <div class="stroy_info">
+      <p>Строительство домов, бань и коттеджей</p>
+    </div>
+    <div class="stroy_foto">
+      <el-image style="width: 100%; height: 100%" src="https://avatars.mds.yandex.net/i?id=0440b1bed4fc89f11a85a15ce6f66e6792d63e12-7546644-images-thumbs&n=13" fit="cover" />
+    </div>
+  </div>
+  
   <div class="carusel">
     <el-carousel :interval="8000" type="card">
       <el-carousel-item v-for="item in products" :key="item.id">
@@ -61,6 +63,24 @@
 <script setup>
 import { ref } from 'vue'
 import ModalWindow from '@/components/ModalWindow.vue';
+
+const onEntry = (entry) => {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+     change.target.classList.add('stroy-show');
+    }else{
+      change.target.classList.remove('stroy-show');
+    }
+  });
+} 
+let options = {
+  threshold: [0.5] };
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll('.stroy, .otdelka');
+
+for (let elm of elements) {
+  observer.observe(elm);
+}
 const show = ref(false)
 const pic = ref({})
 const products = ref([
@@ -97,17 +117,30 @@ const products = ref([
   margin: 0 auto;
   justify-content: space-between;
   padding: 40px;
+  opacity: 0;
+  transform: translateX(48px);
+  transition: all 1.5%;
+  transition: opacity 1s;
+  transition: 0.8s;
+}
+
+.stroy.stroy-show {
+  opacity: 1;
+  transition: opacity 1s;
+  transform: translateX(0);
+  transition: 0.8s;
 }
 
 .stroy_info {
-  width: 50%;
+  width: 70%;
   font-size: 38px;
-  padding-top: 45px;
+  padding-top: 2%;
 }
 
 .stroy_foto {
   display: flex;
   justify-content: flex-end;
+  width: 30%;
 }
 
 .otdelka {
@@ -116,18 +149,31 @@ const products = ref([
   margin: 0 auto;
   justify-content: space-between;
   padding: 40px;
+  opacity: 0;
+  transform: translateX(-48px);
+  transition: all 1.5%;
+  transition: opacity 1s;
+  transition: 0.8s;
+}
+
+.otdelka.stroy-show {
+  opacity: 1;
+  transition: opacity 1s;
+  transform: translateX(0);
+  transition: 0.8s;
 }
 
 .ottdelka_foto {
   display: flex;
   justify-content: flex-end;
-  width: 50%;
+  width: 30%;
 }
 
 .otdelka_info {
-  width: 50%;
+  text-align:right;
+  width: 70%;
   font-size: 38px;
-  padding-top: 45px;
+  padding-top: 2%;
   margin-left: 35px;
 }
 

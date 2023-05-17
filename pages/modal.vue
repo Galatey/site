@@ -34,6 +34,10 @@
     background-color: black;
 }
 
+.image {
+    width: 50%;
+}
+
 .modal_title {
     display: flex;
     min-width: 550px;

@@ -1,46 +1,5 @@
 <template>
     <div class="common-layout">
-                <header class="header">
-                    <nuxt-link class="logo" to="/">
-                        <img src="@/assets/img/logo.jpg" alt="" style="width:100%; height:100%">
-                    </nuxt-link>
-                    <nav class="nav">
-                        <nuxt-link class="nav_item_link">О компании</nuxt-link>
-                        <nuxt-link class="nav_item_link" to="/Portfolio">Работы</nuxt-link>
-                        <nuxt-link class="nav_item_link">Контакты</nuxt-link>
-                    </nav>
-                    <div class="top-phone">
-                        <span class="phone">+7 (900) 000-00-00</span>
-                    </div>
-                </header>
-                <slot />
-                <footer class="footer">
-                    <div>
-                        <nuxt-link class="logo_footer" to="/">
-                            <img src="@/assets/img/logo.jpg" alt="" style="width:100%; height:100%">
-                        </nuxt-link>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                    <div class="contacts">
-                        <span>Контакты</span>
-                        <nuxt-link class="contacts_item_link" to="https://vk.com" target="_blank">
-                            <img class="icons" src="@/assets/img/svg/vk_jwps1kngigw6.svg" alt="">
-                            <span>VK</span>
-                        </nuxt-link>
-                        <nuxt-link class="contacts_item_link" to="https://web.telegram.org" target="_blank">
-                            <img class="icons" src="@/assets/img/svg/telegram_79rt2itlji9i.svg" alt="">
-                            <span>Telegramm</span>
-                        </nuxt-link>
-                        <nuxt-link class="contacts_item_link" to="https://web.whatsapp.com" target="_blank">
-                            <img class="icons" src="@/assets/img/svg/whatsapp_ig80sdcz30vh.svg" alt="">
-                            <span>WhatsApp</span>
-                        </nuxt-link>
-                        <nuxt-link class="contacts_item_link" to="">
-                            <img class="icons" src="@/assets/img/svg/viber_xg4lbhqd40j8.svg" alt="">
-                            Viber
-                        </nuxt-link>
-                    </div>
-                </footer>
         <header class="header">
             <nuxt-link class="logo" to="/">
                 <img src="@/assets/img/logo.jpg" alt="" style="width:100%; height:100%">
@@ -50,6 +9,9 @@
                 <nuxt-link class="nav_item_link" to="/Portfolio">Работы</nuxt-link>
                 <nuxt-link class="nav_item_link">Контакты</nuxt-link>
             </nav>
+            <div class="top-phone">
+                <span class="phone">+7 (900) 000-00-00</span>
+            </div>
         </header>
         <slot />
         <footer class="footer">
@@ -75,7 +37,7 @@
                 </nuxt-link>
                 <nuxt-link class="contacts_item_link" to="">
                     <img class="icons" src="@/assets/img/svg/viber_xg4lbhqd40j8.svg" alt="">
-                    Viber
+                    <span>Viber</span>
                 </nuxt-link>
             </div>
         </footer>
