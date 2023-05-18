@@ -147,7 +147,7 @@
 
     .header {
         display: flex;
-        justify-content: center;
+        padding: 10px 10px;
     }
 
     .logo {
@@ -155,7 +155,7 @@
         width: 120px;
         height: 60px;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         text-decoration: none;
     }
 
