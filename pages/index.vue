@@ -5,77 +5,69 @@
       <p>Наша компания оказывает широкий спектр строительных и инженерных работ</p>
     </div>
     <el-divider class="divider" />
-    <div class="container_carusel">
-      <div class="carusel">
-        <el-carousel :interval="4000" type="card" >
-          <el-carousel-item v-for="item in products" :key="item.id">
-            <img @click="modalwindow = true" :src="item.image" alt=""> 
-          </el-carousel-item>
-        </el-carousel>
-      </div>
-    </div>
-  </div>
-  <el-divider class="divider" />
-  <div class="stroy">
-    <div class="stroy_info">
-      <p>Строительство домов, бань и коттеджей</p>
-    </div>
-    <div class="stroy_foto">
-      <el-image style="width: 100%; height: 100%" src="https://avatars.mds.yandex.net/i?id=0440b1bed4fc89f11a85a15ce6f66e6792d63e12-7546644-images-thumbs&n=13" fit="cover" />
-    </div>
-  </div>
-  <el-divider class="divider" />
-  <div class="otdelka">
-    <div class="ottdelka_foto">
-      <el-image style="width: 100%; height: 100%" src="https://avatars.mds.yandex.net/i?id=0440b1bed4fc89f11a85a15ce6f66e6792d63e12-7546644-images-thumbs&n=13" fit="cover" />
-    </div>
-    <div class="otdelka_info">
-      <p>Внешняя и внутренняя отделка любого уровня сложности</p>
-    </div>
-  </div>
-  <el-divider class="divider" />
-  <div class="stroy">
-    <div class="stroy_info">
-      <p>Строительство домов, бань и коттеджей</p>
-    </div>
-    <div class="stroy_foto">
-      <el-image style="width: 100%; height: 100%" src="https://avatars.mds.yandex.net/i?id=0440b1bed4fc89f11a85a15ce6f66e6792d63e12-7546644-images-thumbs&n=13" fit="cover" />
-    </div>
-  </div>
-  <el-divider class="divider" />
-  <div class="otdelka">
-    <div class="ottdelka_foto">
-      <el-image style="width: 100%; height: 100%" src="https://avatars.mds.yandex.net/i?id=0440b1bed4fc89f11a85a15ce6f66e6792d63e12-7546644-images-thumbs&n=13" fit="cover" />
-    </div>
-    <div class="otdelka_info">
-      <p>Внешняя и внутренняя отделка любого уровня сложности</p>
-    </div>
-  </div>
-  <el-divider class="divider" />
-  <div class="stroy">
-    <div class="stroy_info">
-      <p>Строительство домов, бань и коттеджей</p>
-    </div>
-    <div class="stroy_foto">
-      <el-image style="width: 100%; height: 100%" src="https://avatars.mds.yandex.net/i?id=0440b1bed4fc89f11a85a15ce6f66e6792d63e12-7546644-images-thumbs&n=13" fit="cover" />
-    </div>
-  </div>
-  <el-divider class="divider" />
-  <div class="otdelka">
-    <div class="ottdelka_foto">
-      <el-image style="width: 100%; height: 100%" src="https://avatars.mds.yandex.net/i?id=0440b1bed4fc89f11a85a15ce6f66e6792d63e12-7546644-images-thumbs&n=13" fit="cover" />
-    </div>
-    <div class="otdelka_info">
-      <p>Внешняя и внутренняя отделка любого уровня сложности</p>
-    </div>
-  </div>
-  <div class="carusel">
+    <div class="carusel">
     <el-carousel :interval="8000" type="card">
       <el-carousel-item v-for="item in products" :key="item.id">
         <img @click="show = true" v-on:click="pic = item" :src="item.image" alt="">
       </el-carousel-item>
     </el-carousel>
   </div>
+  </div>
+  <el-divider class="divider" />
+  <div class="stroy">
+    <div class="stroy_info">
+      <p>Строительство домов, бань и коттеджей</p>
+    </div>
+    <div class="stroy_foto">
+      <el-image style="width: 100%; height: 100%" src="https://avatars.mds.yandex.net/i?id=0440b1bed4fc89f11a85a15ce6f66e6792d63e12-7546644-images-thumbs&n=13" fit="cover" />
+    </div>
+  </div>
+  <el-divider class="divider" />
+  <div class="otdelka">
+    <div class="ottdelka_foto">
+      <el-image style="width: 100%; height: 100%" src="https://avatars.mds.yandex.net/i?id=0440b1bed4fc89f11a85a15ce6f66e6792d63e12-7546644-images-thumbs&n=13" fit="cover" />
+    </div>
+    <div class="otdelka_info">
+      <p>Внешняя и внутренняя отделка любого уровня сложности</p>
+    </div>
+  </div>
+  <el-divider class="divider" />
+  <div class="stroy">
+    <div class="stroy_info">
+      <p>Строительство домов, бань и коттеджей</p>
+    </div>
+    <div class="stroy_foto">
+      <el-image style="width: 100%; height: 100%" src="https://avatars.mds.yandex.net/i?id=0440b1bed4fc89f11a85a15ce6f66e6792d63e12-7546644-images-thumbs&n=13" fit="cover" />
+    </div>
+  </div>
+  <el-divider class="divider" />
+  <div class="otdelka">
+    <div class="ottdelka_foto">
+      <el-image style="width: 100%; height: 100%" src="https://avatars.mds.yandex.net/i?id=0440b1bed4fc89f11a85a15ce6f66e6792d63e12-7546644-images-thumbs&n=13" fit="cover" />
+    </div>
+    <div class="otdelka_info">
+      <p>Внешняя и внутренняя отделка любого уровня сложности</p>
+    </div>
+  </div>
+  <el-divider class="divider" />
+  <div class="stroy">
+    <div class="stroy_info">
+      <p>Строительство домов, бань и коттеджей</p>
+    </div>
+    <div class="stroy_foto">
+      <el-image style="width: 100%; height: 100%" src="https://avatars.mds.yandex.net/i?id=0440b1bed4fc89f11a85a15ce6f66e6792d63e12-7546644-images-thumbs&n=13" fit="cover" />
+    </div>
+  </div>
+  <el-divider class="divider" />
+  <div class="otdelka">
+    <div class="ottdelka_foto">
+      <el-image style="width: 100%; height: 100%" src="https://avatars.mds.yandex.net/i?id=0440b1bed4fc89f11a85a15ce6f66e6792d63e12-7546644-images-thumbs&n=13" fit="cover" />
+    </div>
+    <div class="otdelka_info">
+      <p>Внешняя и внутренняя отделка любого уровня сложности</p>
+    </div>
+  </div>
+  
   <el-divider class="divider" />
   <div class="content">
     <span></span>
