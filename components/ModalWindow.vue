@@ -65,7 +65,7 @@ const emit = defineEmits(['close'])
 .image {
     display: flex;
     flex-direction: column;
-    width: 1000px;
+    width: 500px;
 }
 
 .bytton_window {

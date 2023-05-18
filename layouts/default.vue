@@ -53,7 +53,7 @@
     display: flex;
     justify-content: space-between;
     max-width: 1536px;
-    padding: 10px 30px;
+    padding: 10px 40px 10px 10px;
     margin: 0 auto;
     gap: 15px;
     align-items: center;
@@ -162,6 +162,28 @@
     .nav {
         display: none;
     }
+
+}
+
+@media screen and (max-width: 550px) {
+
+.header {
+    display: flex;
+    padding: 10px 30px 10px 10px;
+}
+
+.logo {
+    display: flex;
+    width: 120px;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.nav {
+    display: none;
+}
 
 }
 </style>
